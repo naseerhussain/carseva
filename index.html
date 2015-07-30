@@ -88,6 +88,10 @@ $(document).ready(function(){
         detailsPage(clicked);
     });
 
+    $("#carseva").click(function(){
+    	location.reload();
+    });
+
 });
 
 function clearContainer(){
@@ -105,7 +109,7 @@ function detailsPage(clicked){
 	<div class="container">
 		<br>
 		<!--<button class="btn btn-sm pull-left btn-info" style="margin-right:2%;" id="goBack">Go Back</button>-->
-		<a id="crowdlearn" style="cursor:hand;margin-top:45px;position:absolute;">CarSeva</a><br>
+		<a id="carseva" style="cursor:hand;margin-top:45px;position:absolute;">CarSeva</a><br>
 
 		<div class="col-lg-12" style="margin-top:100px;position:relative;">
     		<div class="input-group">
@@ -126,8 +130,18 @@ function detailsPage(clicked){
 
 
 		<nav class="navbar navbar-default navbar-fixed-bottom">
-  			<div class="container">
-   				 ...
+  			<div class="container" style="width:100%;">
+   				<ul class="nav navbar-nav" style="width:100%;">
+   					<li><br>About Us</li>
+   					<li style="margin-left:30%;">
+   						<ul>
+   							<li>Contact Us</li>
+   							<li>E-mail Us</li>
+   							<li>Download App</li>
+   						</ul>
+   					</li>
+   					<li style="margin-left:30%;"><div><br>Feedback : <input type="text" id="feedInput"><button id="feedback">Submit</button></div></li>
+   				</ul>
   			</div>
 		</nav>
 
