@@ -1,3 +1,14 @@
+<?php
+  session_start();
+  echo "hi this is index.php file";
+  echo $_SESSION['mobile'];
+  if(isset($_SESSION['mobile']) && isset($_SESSION['pwd']))
+  {
+    header('Location: home.php');
+  }else{
+    header('Location: index.php');
+  }
+?>
 
 <!DOCTYPE html>
 
@@ -10,7 +21,7 @@
 
 	<link href="css/smoothState.css" rel="stylesheet">
 
-	<link href="css/jquery.tagsinput.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 
 
     <script type="text/javascript" charset="utf-8" src="lib/jquery.min.js"></script>
@@ -19,7 +30,6 @@
 
 	<script type="text/javascript" src="lib/masonry.pkgd.min.js"></script>
 
-	<script type="text/javascript" src="lib/jquery.tagsinput.js"></script>
 
 
 <title>CarSeva</title>

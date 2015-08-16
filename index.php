@@ -25,6 +25,10 @@
 
 	<script type="text/javascript" src="lib/masonry.pkgd.min.js"></script>
 
+	<script type="text/javascript" src="lib/jssor.js"></script>
+
+    <script type="text/javascript" src="lib/jssor.slider.js"></script>
+
 
 	<title>CarSeva</title>
 	<style type="text/css">
@@ -191,6 +195,30 @@
 			return true;
 		}
 	</script>
+	<script>
+
+        $(document).ready(function () {
+        	for(i=1;i<=6;i++){
+        		var div = '<div><img u="image" src="images/'+i+'.jpg" /></div>';
+        		var j = parseInt(i+1);
+        		if(i==6){
+        			j=1;
+        		}
+        		var div2 = '<div><img u="image" src="images/'+j+'.jpg" /></div>';
+        		
+        		$("#images2").append(div2);
+            $("#images").append(div);
+        	}
+            var options = {
+
+                $AutoPlay: true,                                   //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $DragOrientation: 1                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+            var jssor_slider2 = new $JssorSlider$("slider2_container", options);
+        });
+    </script>
 </head>
 <body>
 	<div class="page-header" style="background-color:#333;margin-top:-20px">
@@ -201,9 +229,20 @@
   		<h1><span style="margin-left:5%;color:white;margin-top:2%;">Car</span><span style="color:#cc0033;">Seva</span></h1>
 
 	</div>
+
+	
+
 	<div class="container">
 		<div class="row">
-            <div class="col-sm-6 col-md-4 col-md-offset-4" style="background-color:#686868;margin-top:2%;">
+			<div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 370px;
+        height: 300px;">
+        		<div u="slides" id="images" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 370px; height: 300px;
+            overflow: hidden;">
+        		</div>
+    		</div>
+
+
+            <div class=" col-md-4 col-md-offset-4" style="background-color:#686868;margin-top:-26%;">
                 <h1 class="text-center login-title white">Sign Up</h1>
                 <div class="account-wall">
                     <form class="form-signin">
@@ -220,6 +259,13 @@
                 </div>
             </div>
         </div>
+
+        <div id="slider2_container" style="position: relative; top: -407px; left: 788px; width: 370px;
+        height: 300px;">
+        		<div u="slides" id="images2" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 370px; height: 300px;
+            overflow: hidden;">
+        		</div>
+    		</div>
 
 	</div><!--Container div ends here-->
     
