@@ -260,7 +260,7 @@
             </div>
         </div>
 
-        <div id="slider2_container" style="position: relative; top: -407px; left: 788px; width: 370px;
+        <div id="slider2_container" style="position: relative; top: -420px; left: 788px; width: 370px;
         height: 300px;">
         		<div u="slides" id="images2" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 370px; height: 300px;
             overflow: hidden;">
